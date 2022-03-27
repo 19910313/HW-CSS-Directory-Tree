@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Directory Tree | CSS Pseudo Selectors</title>
+    <style>
+      body {
+        background-color: #222;
+      }
+      .tree {
+        color: white;
+        font-family: arial;
+        font-size: 64px;
+      }
+      .folder {
+        /* border: 1px solid red; */
+        background-repeat: no-repeat;
+        background-image: url(Places-folder-documents-icon.png);
+        padding: 24px 0 24px 72px;
+        list-style-type: "\2520";
+        /* height: 18px; */
+        line-height: 18px;
+      }
+      .folder:hover {
+        background-color: gray;
+      }
+      .file {
+        /* border: 1px solid red; */
+        background-repeat: no-repeat;
+        background-image: url(Actions-document-properties-icon.png);
+        padding: 24px 0 24px 72px;
+        list-style-type: "\2520";
+        /* height: 18px; */
+        line-height: 18px;
+      }
+      .file:hover {
+        background-color: #99ff66;
+      }
+      .file:last-child {
+        list-style-type: "\2516";
+      }
+      .folder:last-child {
+        list-style-type: "\2516";
+      }
+      .name {
+        font-size: 18px;
+      }
+      .name:hover {
+        color: black;
+      }
+      .empty {
+        background-image: url(Places-folder-blue-icon.png);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tree">
+      <li class="folder">
+        <div class="name">Project [DONE]</div>
+        <ul class="tree">
+          <li class="file">
+            <div class="name">File 1</div>
+          </li>
+          <li class="file">
+            <div class="name">File 2</div>
+          </li>
+        </ul>
+      </li>
+      <li class="folder"><div class="name">Project [NEW]</div></li>
+      <li class="folder empty"><div class="name">Project [ToBeDone]</div></li>
+    </ul>
+  </body>
+</html>
